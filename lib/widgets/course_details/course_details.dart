@@ -15,7 +15,7 @@ class CourseDetails extends StatelessWidget {
         double titleSize =
             sizingInformation.deviceScreenType == DeviceScreenType.Mobile
                 ? 50
-                : 80;
+                : 50;
 
         double descriptionSize =
             sizingInformation.deviceScreenType == DeviceScreenType.Mobile

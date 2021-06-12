@@ -12,31 +12,33 @@ class HomeContentMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        CourseDetails(),
-        SizedBox(
-          height: 100,
-        ),
-        showDialouge(
-          cancelButton: cancelButton,
-          continueButton: continueButton,
-          topText: FOCC,
-          bottomText: "Contact Numbers",
-          insideButtonText: FOCC,
-        ),
-        SizedBox(
-          height: 100,
-        ),
-        TextButton(onPressed: () { launch("tel://+6568741616"); },
-        child: CallToAction(CampusSec)),
-        SizedBox(
-          height: 100,
-        ),
-        TextButton(child: CallToAction(OSA), onPressed: (){launch(OSAA.toString());},),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          CourseDetails(),
+          SizedBox(
+            height: 100,
+          ),
+          showDialouge(
+            cancelButton: cancelButton,
+            continueButton: continueButton,
+            topText: FOCC,
+            bottomText: "Contact Numbers",
+            insideButtonText: FOCC,
+          ),
+          SizedBox(
+            height: 100,
+          ),
+          TextButton(onPressed: () { launch("tel://+6568741616"); },
+          child: CallToAction(CampusSec)),
+          SizedBox(
+            height: 100,
+          ),
+          TextButton(child: CallToAction(OSA), onPressed: (){launch(OSAA.toString());},),
+        ],
+      ),
     );
   }
 

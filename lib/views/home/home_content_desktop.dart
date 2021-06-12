@@ -11,41 +11,46 @@ class HomeContentDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        CourseDetails(),
-        Column(
-          children: [
-            SizedBox(
-              height: 200,
-            ),
-            showDialouge(
-              cancelButton: cancelButton,
-              continueButton: continueButton,
-              topText: FOCC,
-              bottomText: "Contact Numbers",
-              insideButtonText: FOCC,
-            ),
-            SizedBox(
-              height: 100,
-            ),
-            TextButton(
-                onPressed: () {
-                  launch("tel://+6568741616");
-                },
-                child: CallToAction(CampusSec)),
-            SizedBox(
-              height: 100,
-            ),
-            TextButton(
-              child: CallToAction(OSA),
-              onPressed: () {
-                launch(OSAA.toString());
-              },
-            ),
+    return SingleChildScrollView(
+      child: Stack(
+        children: [    Row(
+          children: <Widget>[
+            CourseDetails(),
+            Column(
+              children: [
+                SizedBox(
+                  height: 200,
+                ),
+                showDialouge(
+                  cancelButton: cancelButton,
+                  continueButton: continueButton,
+                  topText: FOCC,
+                  bottomText: "Contact Numbers",
+                  insideButtonText: FOCC,
+                ),
+                SizedBox(
+                  height: 100,
+                ),
+                TextButton(
+                    onPressed: () {
+                      launch("tel://+6568741616");
+                    },
+                    child: CallToAction(CampusSec)),
+                SizedBox(
+                  height: 100,
+                ),
+                TextButton(
+                  child: CallToAction(OSA),
+                  onPressed: () {
+                    launch(OSAA.toString());
+                  },
+                ),
+              ],
+            )
           ],
-        )
-      ],
+        ),
+        ],
+      ),
     );
   }
 
